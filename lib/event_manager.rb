@@ -2,9 +2,11 @@ require 'csv'
 require 'sunlight/congress'
 require 'erb'
 
-
+#api key
 Sunlight::Congress.api_key = "e179a6973728c4dd3fb1204283aaccb5"
 
+
+#method to turn zip into string and make sure all zipcodes are exactly 5 chars in length
 def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5,"0")[0..4]
 end
